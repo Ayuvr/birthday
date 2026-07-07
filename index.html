@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Swasty ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Hearts -->
+    <div id="hearts-container"></div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="music/be-intehaan.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- PASSWORD PAGE -->
+    <section id="passwordPage" class="page active-page">
+
+        <div class="glass-card password-card">
+
+            <h1 class="main-title">
+                🔒 Secret Birthday Surprise
+            </h1>
+
+            <p class="subtitle">
+                A special surprise is waiting for Swasty ❤️
+            </p>
+
+        <input
+    type="password"
+    id="password"
+    placeholder="Enter Password">
+
+<p class="password-hint">
+🎂 Hint: Think about the day your story began...
+</p>
+
+<button id="unlockBtn">
+    Unlock ❤️
+</button>
+
+            <p id="errorMessage"></p>
+
+        </div>
+
+    </section>
+
+    <!-- TIMER PAGE -->
+    <section id="timerPage" class="page">
+
+        <div class="glass-card">
+
+            <h1 class="birthday-name">
+                Swasty ❤️
+            </h1>
+
+            <h2 class="timer-heading">
+                🌸 Time You've Been Making This World More Beautiful
+            </h2>
+
+            <div class="timer-container">
+
+                <div class="time-box">
+                    <span id="years" class="number">00</span>
+                    <span class="label">Years</span>
+                </div>
+
+                <div class="time-box">
+                    <span id="months" class="number">00</span>
+                    <span class="label">Months</span>
+                </div>
+
+                <div class="time-box">
+                    <span id="days" class="number">00</span>
+                    <span class="label">Days</span>
+                </div>
+
+                <div class="time-box">
+                    <span id="hours" class="number">00</span>
+                    <span class="label">Hours</span>
+                </div>
+
+                <div class="time-box">
+                    <span id="minutes" class="number">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+
+                <div class="time-box">
+                    <span id="seconds" class="number">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+
+            </div>
+
+            <div class="seconds-lived">
+
+                <h3>
+                    ⏳ You've Lived More Than
+                </h3>
+
+                <div id="totalSeconds">
+                    0
+                </div>
+
+                <p>
+                    Seconds In This Beautiful World ❤️
+                </p>
+
+            </div>
+
+            <p class="special-line">
+                Every moment has made you even more special ❤️
+            </p>
+
+            <button id="enterWebsiteBtn" class="primary-btn">
+                ✨ Enter The Birthday Surprise ✨
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- MAIN WEBSITE -->
+    <main id="mainWebsite">
+
+        <!-- HERO -->
+        <section class="hero-section">
+
+            <div class="glass-card">
+
+                <h1 class="hero-title">
+                    Happy Birthday Swasty 🎂❤️
+                </h1>
+
+                <p class="hero-subtitle">
+                    Today is all about celebrating you ✨
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- LETTER -->
+        <section class="section">
+
+            <div class="glass-card">
+
+                <h2>💌 A Letter Just For You</h2>
+
+                <div id="envelope">
+
+                    <div class="envelope-icon">
+                        💌
+                    </div>
+
+                    <h3>
+                        Click The Envelope To Open Your Letter
+                    </h3>
+
+                </div>
+
+                <div id="letterContent">
+
+                    <div id="typedLetter"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PHOTO MEMORIES -->
+        <section class="section">
+
+            <div class="glass-card">
+
+                <h2>📸 Beautiful Memories</h2>
+
+                <p class="section-text">
+                    <b>Every memory tells a story.</b>
+                </p>
+                <p class="section-text">
+                    <b>Click on the corners of the photos</b>
+                </p>
+                <div class="photo-grid">
+
+                    <img src="images/photo1.jpg" alt="">
+                    <img src="images/photo2.jpg" alt="">
+                    <img src="images/photo3.jpg" alt="">
+                    <img src="images/photo4.jpg" alt="">
+                    <img src="images/photo5.jpg" alt="">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MEMORY STARS -->
+        <section class="section">
+
+            <div class="glass-card">
+
+                <h2>❤️‍🩹 Memory Hearts</h2>
+
+                <h3>
+                    Click the Hearts to Reveal Special Messages for You ❤️
+                </h3>
+
+                <div class="stars-container">
+
+                    <button class="star" data-message="You deserve all the happiness in the world ❤️">💝</button>
+
+                    <button class="star" data-message="Never stop dreaming ✨">💝</button>
+
+                    <button class="star" data-message="Keep smiling every day 😊">💝</button>
+
+                    <button class="star" data-message="You make life brighter 🌸">💝</button>
+
+                    <button class="star" data-message="Happy Birthday Swasty 🎂❤️">💝</button>
+
+                </div>
+
+                <div id="starMessage"></div>
+
+            </div>
+
+        </section>
+
+        <!-- SPECIAL -->
+        <section class="section">
+
+            <div class="glass-card">
+
+                <h2>❤️ What Makes You Special</h2>
+
+                <div class="qualities">
+
+    <!-- Smile -->
+    <div class="voice-card" data-audio="smile">
+        <div class="voice-emoji">😊</div>
+
+        <h3>Your Smile</h3>
+
+        <p>Tap the button below ❤️</p>
+
+        <button class="voice-btn">
+            ▶ Listen to My Voice
+        </button>
+
+        <div class="voice-progress">
+            <div class="voice-progress-fill"></div>
+        </div>
+
+        <div class="voice-message">
+            Your smile is one of the most beautiful things I've ever seen...
+        </div>
+    </div>
+
+    <!-- Kindness -->
+    <div class="voice-card" data-audio="kindness">
+        <div class="voice-emoji">🌸</div>
+
+        <h3>Your Kindness</h3>
+
+        <p>Tap the button below ❤️</p>
+
+        <button class="voice-btn">
+            ▶ Listen to My Voice
+        </button>
+
+        <div class="voice-progress">
+            <div class="voice-progress-fill"></div>
+        </div>
+
+        <div class="voice-message">
+            Your kindness makes everyone around you feel comfortable...
+        </div>
+    </div>
+
+    <!-- Personality -->
+    <div class="voice-card" data-audio="personality">
+        <div class="voice-emoji">✨</div>
+
+        <h3>Your Personality</h3>
+
+        <p>Tap the button below ❤️</p>
+
+        <button class="voice-btn">
+            ▶ Listen to My Voice
+        </button>
+
+        <div class="voice-progress">
+            <div class="voice-progress-fill"></div>
+        </div>
+
+        <div class="voice-message">
+            I love the way you are. Never change.
+        </div>
+    </div>
+
+    <!-- Positive Energy -->
+    <div class="voice-card" data-audio="positive">
+        <div class="voice-emoji">🌈</div>
+
+        <h3>Your Positive Energy</h3>
+
+        <p>Tap the button below ❤️</p>
+
+        <button class="voice-btn">
+            ▶ Listen to My Voice
+        </button>
+
+        <div class="voice-progress">
+            <div class="voice-progress-fill"></div>
+        </div>
+
+        <div class="voice-message">
+            You have a way of making every moment brighter.
+        </div>
+    </div>
+
+    <!-- Heart -->
+    <div class="voice-card" data-audio="heart">
+        <div class="voice-emoji">❤️</div>
+
+        <h3>Your Heart</h3>
+
+        <p>Tap the button below ❤️</p>
+
+        <button class="voice-btn">
+            ▶ Listen to My Voice
+        </button>
+
+        <div class="voice-progress">
+            <div class="voice-progress-fill"></div>
+        </div>
+
+        <div class="voice-message">
+            Your heart is the reason you're so special to me.
+        </div>
+    </div>
+
+</div>
+            </div>
+
+        </section>
+
+        <!-- WISH COUNTER -->
+        <section class="section">
+
+            <div class="glass-card">
+
+                <h2>🎂 Birthday Wishes</h2>
+
+                <div id="wishCounter">
+                    0
+                </div>
+
+                <h3>
+                    Wishes Sent To Swasty ❤️
+                </h3>
+
+            </div>
+
+        </section>
+
+        <!-- BIRTHDAY WISH -->
+        <section class="section">
+
+            <div class="glass-card">
+
+                <h2>🌙 Make A Birthday Wish</h2>
+
+                <button id="wishBtn" class="primary-btn">
+                    Make A Wish ✨
+                </button>
+
+                <div id="wishMessage">
+
+                    <p>
+                        Close your eyes,
+                        make a wish,
+                        and believe in it ❤️
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LONG MESSAGE -->
+        <section class="section">
+
+            <div class="glass-card">
+
+                <h2>❤️ A Message For You</h2>
+
+                <div class="long-message">
+
+                   <p>
+Today is a very special day because it celebrates the wonderful person you are.
+From the moment you came into this world, you started creating memories,
+spreading smiles, and making the lives of the people around you brighter.
+                  </p>
+
+                   <br>
+
+<p>
+Every year is a collection of moments, dreams, achievements, lessons,
+friendships, and beautiful memories. Today marks another chapter in your story,
+and it's the perfect time to celebrate everything that makes you unique.
+</p>
+
+<br>
+
+<p>
+May your smile always stay bright, your heart stay happy,
+and your dreams continue to grow bigger.
+May every challenge make you stronger,
+every success make you prouder,
+and every day bring you closer to the life you wish for.
+</p>
+
+<br>
+
+<p>
+Never forget how special you are.
+The kindness you show, the happiness you spread,
+and the memories you create leave a mark on everyone around you.
+</p>
+
+<br>
+
+<p>
+Today is your day.
+Laugh louder.
+Smile bigger.
+Dream higher.
+And make memories you'll cherish forever.
+</p>
+
+<br>
+
+<p>
+May this birthday bring happiness,
+love,
+success,
+good health,
+and countless unforgettable moments.
+</p>
+
+<br>
+
+<p>
+Thank you for being you.
+The world is more beautiful because you're in it.
+</p>
+
+<br>
+
+<h2>
+Happy Birthday, Swasty ❤️🎉✨
+</h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+       <!-- LETTER MESSAGE SECTION -->
+<section class="section">
+
+    <div class="letter-card">
+
+        <h2 class="letter-title">
+            💌 Before You Go...
+        </h2>
+
+        <p class="letter-subtitle">
+            If you'd like to say something, I'd love to read it ❤️
+        </p>
+
+        <div class="paper">
+
+            <h3>
+                A Little Note For Me ❤️
+            </h3>
+
+            <p class="paper-text">
+                Your words mean a lot.
+                Whatever is in your heart,
+                feel free to write it here...
+            </p>
+
+           <form id="messageForm">
+
+    <textarea
+        name="message"
+        id="feelingsBox"
+        placeholder="Write your thoughts here..."
+        required></textarea>
+
+    <button type="submit" class="primary-btn">
+        💖 Send My Message
+    </button>
+
+</form>
+
+<p id="successMessage"></p>
+
+<!-- PRIVATE CHAT SECTION -->
+<section class="section">
+
+    <div class="glass-card">
+
+        <h2>💝 Private Room</h2>
+
+        <p class="section-text">
+            A special place only for you 💝
+        </p>
+
+        <button id="openChatBtn" class="primary-btn">
+            Enter Private Room
+        </button>
+
+    </div>
+
+</section>
+
+<!-- CHAT PASSWORD MODAL -->
+<div id="chatModal" class="chat-modal">
+
+    <div class="chat-modal-content">
+
+        <h2>🔒 Private Chat</h2>
+
+        <input
+            type="password"
+            id="chatPassword"
+            placeholder="Enter chat password">
+
+        <button id="chatUnlockBtn">
+            Unlock
+        </button>
+
+    </div>
+
+</div>
+
+      <!-- GRAND FINALE -->
+        <section class="section finale-section">
+
+            <div class="glass-card">
+
+                <h1>
+                    🎉 Happy Birthday Swasty ❤️
+                </h1>
+
+                <p>
+                    Thank you for being exactly who you are.
+                </p>
+
+                <p>
+                    The world is a better place because you're in it.
+                </p>
+
+                <p>
+                    May your future be filled with happiness,
+                    success,
+                    laughter,
+                    and unforgettable memories.
+                </p>
+
+                <h2>
+                    ❤️ Never Stop Smiling ❤️
+                </h2>
+
+                <button id="confettiBtn" class="primary-btn">
+                    🎊 Celebrate 🎊
+                </button>
+
+            </div>
+
+        </section>
+
+        <p> Thank you for spending</p>
+        <p>your birthday with me.</p>
+
+
+        
+           
+           <p> I hope this little website</p>
+            <p> made you smile. </p>
+       
+
+        
+       
+           <p> No matter where life takes you,</p> 
+          <p> I hope you always stay happy.</p>
+        
+
+        <h3>❤️</h3>
+
+
+        <p>Made with love,</p>
+        <p><b>Akshit</b></p>
+
+    </main>
+
+    <div id="wishOverlay">
+
+    <div class="night-sky">
+
+        <div id="shootingStar"></div>
+
+        <div class="wish-text">
+            ✨ Make Your Wish ✨
+        </div>
+
+        <div class="wish-countdown">
+            Returning in <span id="countdown">10</span>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Voice Player -->
+<audio id="voicePlayer"></audio>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
