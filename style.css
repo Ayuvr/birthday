@@ -1300,3 +1300,127 @@ body.page-exit{
     }
 
 }
+
+/* ===========================
+   Premium Birthday Logo
+=========================== */
+
+.birthday-logo{
+
+    position:relative;
+
+    width:220px;
+
+    height:220px;
+
+    margin:0 auto 35px;
+
+}
+
+.logo-ring{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    padding:4px;
+
+    background:linear-gradient(
+        45deg,
+        #ff5fa2,
+        #ffd700,
+        #b388ff,
+        #ff5fa2
+    );
+
+    animation:rotateRing 8s linear infinite;
+
+}
+
+.logo-inner{
+
+    position:absolute;
+
+    inset:8px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    text-align:center;
+
+    box-shadow:0 0 40px rgba(255,95,162,.45);
+
+}
+
+.logo-heart{
+
+    font-size:42px;
+
+    animation:heartbeat 2s infinite;
+
+}
+
+.logo-inner h2{
+
+    margin:12px 0 6px;
+
+    font-size:30px;
+
+    font-family:cursive;
+
+}
+
+.logo-inner p{
+
+    font-size:14px;
+
+    opacity:.9;
+
+}
+
+@keyframes rotateRing{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+}
