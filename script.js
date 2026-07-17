@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
    ELEMENTS
 ========================= */
 
+const loadingScreen = document.getElementById("loadingScreen");
+
+const loadingProgress = document.querySelector(".loading-progress");
+
+const loadingText = document.getElementById("loadingText");
+
 const passwordPage = document.getElementById("passwordPage");
 const timerPage = document.getElementById("timerPage");
 const mainWebsite = document.getElementById("mainWebsite");
@@ -26,17 +32,21 @@ const bgMusic = document.getElementById("bgMusic");
 
 unlockBtn.addEventListener("click", () => {
 
-    const password = passwordInput.value.trim();
+  const password = passwordInput.value.trim();
 
-    if(password === "240710"){
+if(password === "240710"){
+
+    startBirthdayLoading(() => {
 
         passwordPage.classList.remove("active-page");
+
         timerPage.classList.add("active-page");
 
         bgMusic.play().catch(() => {});
 
-    }else{
+    });
 
+}else{
         errorMessage.textContent =
             "❌ Wrong password. 💖 Hint: The secret code is a day you'll never forget...";
 
@@ -805,4 +815,44 @@ document.querySelectorAll(".voice-btn").forEach(btn => {
     button.disabled = false;
 
    };
+}
+
+function startBirthdayLoading(callback){
+
+    loadingScreen.style.display = "flex";
+
+    loadingProgress.style.width = "0%";
+
+    loadingText.innerHTML = "🎁 Preparing Your Surprise...";
+
+    setTimeout(() => {
+
+        loadingProgress.style.transition = "width 3s linear";
+
+        loadingProgress.style.width = "100%";
+
+    },100);
+
+    setTimeout(() => {
+
+        loadingText.innerHTML = "✨ Opening Your Birthday Surprise...";
+
+    },1500);
+
+    setTimeout(() => {
+
+        loadingScreen.style.opacity = "0";
+
+        setTimeout(()=>{
+
+            loadingScreen.style.display="none";
+
+            loadingScreen.style.opacity="1";
+
+            callback();
+
+        },700);
+
+    },3200);
+
 }
