@@ -1447,6 +1447,10 @@ body.page-exit{
 
     z-index:99999;
 
+   opacity:1;
+
+transition:opacity .7s ease;
+
 }
 
 .loading-content{
