@@ -794,8 +794,7 @@ document.querySelectorAll(".voice-btn").forEach(btn => {
     button.disabled = true;
 
     // Lower the background music
-    fadeVolume(bgMusic, 0.2, 700);
-
+    fadeVolume(bgMusic, 0.15, 1500);
     // Load the correct voice file
     voicePlayer.src = `audio/${audioName}.mp3`;
 
@@ -806,7 +805,7 @@ document.querySelectorAll(".voice-btn").forEach(btn => {
     // Restore music when voice ends
    voicePlayer.onended = () => {
 
-    fadeVolume(bgMusic,1,700);
+    fadeVolume(bgMusic, 1, 1500);
 
     card.classList.remove("playing");
 
